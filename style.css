@@ -130,7 +130,7 @@ nav{
     background: linear-gradient(#fe320a,#fe430a);
     position: absolute;
     animation-name: anime2;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
@@ -144,7 +144,7 @@ nav{
     background: linear-gradient(#fe320a,#fe430a);
     position: absolute;
     animation-name: anime1;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
@@ -179,4 +179,35 @@ nav{
         transform: translate(-20%,20%);
     }
     
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 8vw 0;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+#moving-text{
+    overflow-x: auto;
+    /* white-space: nowrap; */
+   
+}
+.con{
+    white-space: nowrap;
+    /* display: inline-block; */
+}
+#moving-text h1{
+   font-size: 9vw;
+   display: inline-block;
+
+}
+#gola{
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #fe320a;
+    margin: 1vw 2vw;
 }
