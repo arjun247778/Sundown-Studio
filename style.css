@@ -2,6 +2,11 @@
     font-family: new;
     src: url(NeueHaasDisplayMediu.ttf);
 }
+@font-face {
+    font-family: new;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -181,22 +186,29 @@ nav{
     
 }
 #page2{
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     background-color: #fff;
     padding: 8vw 0;
+    position: relative;
+   
 }
 #moving-text::-webkit-scrollbar{
     display: none;
 }
 #moving-text{
     overflow-x: auto;
-    /* white-space: nowrap; */
+    white-space: nowrap;
+    
    
 }
 .con{
     white-space: nowrap;
-    /* display: inline-block; */
+    display: inline-block;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
 }
 #moving-text h1{
    font-size: 9vw;
@@ -204,10 +216,105 @@ nav{
 
 }
 #gola{
+
     display: inline-block;
     height: 70px;
     width: 70px;
     border-radius: 50%;
     background-color: #fe320a;
     margin: 1vw 2vw;
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+#page2-bottom{
+    height: 80vh;
+    padding: 4.5vw;
+    width: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+
+}
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+}
+#bottom-part2{
+    width: 20%;
+
+}
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+#bottom-part2 p{
+    font-weight: 100;
+}
+#page2 #gooey{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#ff2d07,#ff5c0b);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes gooey {
+    from{
+        filter: blur(20px);
+        transform: translate(10%,-10%) skew(0) ;
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+    
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+}
+.elem{
+    height: 150px;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+.elem h2{
+    font-size: 2vw;
+}
+ .elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.4s;
+
+}
+.elem:hover .overlay{
+    top:0;
 }
