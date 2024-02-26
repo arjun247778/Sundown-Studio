@@ -423,15 +423,7 @@ nav h3 {
     width: 100%;
     /* background-color: red; */
 }
-#footer p{
-    display: flex;
-    justify-content: flex-end;
-    z-index: 99;
-    font-weight: 200;
-    font-size: 2vw;
-    padding-bottom: 1vw;
-    
-}
+
 
 
 #footer-bottom {
