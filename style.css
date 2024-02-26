@@ -9,11 +9,6 @@
     src: url(./NeueHaasDisplayLight.ttf);
 }
 
-@font-face {
-    font-family: neu;
-    font-weight: 200;
-    src: url(./NeueHaasDisplayRoman.ttf);
-}
 
 * {
     margin: 0;
@@ -393,12 +388,15 @@ nav h3 {
 }
 
 #page5 {
+    
     height: 100vh;
     width: 100%;
     /* background-color: #EFEAE3; */
+    
 }
 
 #footer {
+    
     position: fixed;
     height: 105vh;
     width: 100%;
@@ -418,15 +416,41 @@ nav h3 {
 }
 
 #footer-div {
+    z-index: 99;
+    padding-top: 2vw;
     height: 20vh;
+    font-size: 2vw;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
 }
+#footer p{
+    display: flex;
+    justify-content: flex-end;
+    z-index: 99;
+    font-weight: 200;
+    font-size: 2vw;
+    padding-bottom: 1vw;
+    
+}
+
 
 #footer-bottom {
     border-top: 1px solid #dadada;
     height: 10vh;
     width: 100%;
+    
+}
+#theend{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+#theend a{
+    color: white;
+    text-decoration: none;
+    
 }
 
 #full-scr {
@@ -671,3 +695,62 @@ nav h3 {
       
     }
 }
+#hero-shape2{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff2d03;
+    top: -8%;
+    left: -12%;
+    filter: blur(20px);
+    animation-name: shape2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes shape2 {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0deg);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+    
+    
+}
+#hero-shape3{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff2d03;
+    top: -8%;
+    right: -12%;
+    filter: blur(20px);
+    animation-name: shape3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes shape3 {
+    from {
+        filter: blur(20px);
+        transform: translate(16%, -10%) skew(-12deg);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-16%, 10%) skew(0deg);
+    }
+    
+    
+}
+
